@@ -14,7 +14,9 @@ function Banner() {
                 <h1 className='description'>In publishing and graphic design In publishing and graphic design</h1>
 
             </div>
-            
+            <div className="fade_bottom">
+
+            </div>
         </div>
     )
 }
