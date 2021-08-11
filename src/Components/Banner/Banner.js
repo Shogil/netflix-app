@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react'
 import './Banner.css'
+import axios from '../../axios'
 
 function Banner() {
     useEffect(() => {
