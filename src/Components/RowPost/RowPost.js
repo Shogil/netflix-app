@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import './RowPost.css'
+import axios from '../../axios'
+import {} from '../../Constants/Constants'
 
 function RowPost() {
+    useEffect(() => {
+        
+    }, [])
     return(
         <div className="row">
          <h2>Title</h2>
