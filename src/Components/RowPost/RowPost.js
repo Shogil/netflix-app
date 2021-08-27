@@ -27,5 +27,6 @@ function RowPost(props) {
         </div>
     )
 }
-
 export default RowPost
+
+//shogil
