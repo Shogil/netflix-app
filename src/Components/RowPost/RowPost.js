@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import './RowPost.css'
 import axios from '../../axios'
-import {imageUrl} from '../../Constants/Constants'
+import {imageUrl, API_KEY} from '../../Constants/Constants'
 import Youtube from 'react-youtube'
 
 function RowPost(props) {
@@ -26,8 +26,10 @@ function RowPost(props) {
       };
       const handleMovie = (id) => {
           console.log(id)
-          axios.get('/3/movie/436969/videos?api_key=61a47c0a9f14788a36e3f47cd0f073b3&language=en-US').then(response=>{
-              console.log(response.data)
+          axios.get(`/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
+              if(response.data.results.length!==0){
+                  setUrlId(response.data.results[0])
+              }
           })
 
       }
